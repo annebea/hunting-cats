@@ -1,0 +1,42 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to :root, class: "navbar-brand" do %>
+    <%= image_tag "hunting_cat_logo.jpeg", class: "image_rounded" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to 'Login', new_user_session_path, class: "btn btn-primary mx-4" unless user_signed_in? %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign-up', new_user_registration_path, class: "btn btn-primary mx-4" unless user_signed_in? %>
+      </li>
+     <!--  <li class="nav-item active">
+        <%= link_to "Home", :root, class: "nav-link" %>
+      </li> -->
+
+      <li class="nav-item dropdown">
+        <!-- && @user.avatar.key?         -->
+        <% if user_signed_in? %>
+          <% unless current_user.avatar.key.nil?  %>
+            <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
+          <!-- image_tag ("https://kitt.lewagon.com/placeholder/users/ssaunier" -->
+            <!-- image_tag "cl_image_path user.key" -->
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "My bookings as client", bookings_path, class: "dropdown-item" %>
+            <%= link_to "My bookings as owner", owner_bookings_path, class: "dropdown-item" unless current_user.cats.nil? %>
+            <%= link_to "My cats as owner", owner_cats_path, class: "dropdown-item" if current_user.cats.any? %>
+            <%= link_to "Create a cat as owner", new_owner_cat_path, class: "dropdown-item" if user_signed_in? %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item " if user_signed_in? %>
+          </div>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
