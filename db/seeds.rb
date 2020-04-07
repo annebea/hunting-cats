@@ -76,4 +76,3 @@ booking3 = Booking.create(cat_id: 5, user_id: 4, starting_date: Date.new(2020,4,
 booking4 = Booking.create(cat_id: 5, user_id: 4, starting_date: Date.new(2020,5,5), ending_date: Date.new(2020,5,7), status: 'pending', total_price: 70)
 booking5 = Booking.create(cat_id: 1, user_id: 2, starting_date: Date.new(2020,5,2), ending_date: Date.new(2020,4,4), status: 'pending', total_price: 40)
 booking6 = Booking.create(cat_id: 2, user_id: 6, starting_date: Date.new(2020,4,26), ending_date: Date.new(2020,4,27), status: 'pending', total_price: 30)
-
