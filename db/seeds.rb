@@ -1,12 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 require "open-uri"
 
 Booking.destroy_all
@@ -83,3 +76,4 @@ booking3 = Booking.create(cat_id: 5, user_id: 4, starting_date: Date.new(2020,4,
 booking4 = Booking.create(cat_id: 5, user_id: 4, starting_date: Date.new(2020,5,5), ending_date: Date.new(2020,5,7), status: 'pending', total_price: 70)
 booking5 = Booking.create(cat_id: 1, user_id: 2, starting_date: Date.new(2020,5,2), ending_date: Date.new(2020,4,4), status: 'pending', total_price: 40)
 booking6 = Booking.create(cat_id: 2, user_id: 6, starting_date: Date.new(2020,4,26), ending_date: Date.new(2020,4,27), status: 'pending', total_price: 30)
+
