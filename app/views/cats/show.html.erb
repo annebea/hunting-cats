@@ -1,0 +1,81 @@
+<div class="container-header">
+<div><h1>The cat :</h1></div>
+<div><h1> <%= @cat.name %></h1></div>
+
+</div>
+
+<div class="container">
+<div class="row">
+  <div class="column-left">
+    <div class="card-trip" >
+    <div>
+      <img  src="http://loremflickr.com/800/280/chat" alt="This is a hunting cat">
+    </div>
+      <div class="card-trip-infos">
+        <div> <h5 class="card-trip .card-trip-infos"> <%= @cat.name.upcase %></h5> </div>
+        <div> <h2 > Description: <%= @cat.description %> </h2> </div>
+        <div> <h2 > Breed: <%= @cat.breed %> </h2> </div>
+        <div> <h2 > Performance: <%= @cat.performance %> </h2></div>
+        <div> <h2 class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </h2></div>
+        <div> <h2 > Status: <%= @cat.status %> </h2></div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          <div>
+           <%= link_to "Back to index", cats_path %>
+          </div>
+      </div>
+</div>
+
+  </div>
+  <div class="column-right">
+
+    <div>
+      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" placeholder="From" name="search[query]" id="search_query" />
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i> date
+          </button>
+        </div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" placeholder="To" name="search[query]" id="search_query" />
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i> date
+          </button>
+        </div>
+      <% end %>
+
+
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Planner</div>
+      <div class="card-body">
+        <h5 class="card-title">Availability</h5>
+        <p class="card-text">Availability Planner will take place here.</p>
+      </div>
+    </div>
+
+    <div>
+    <!-- <a class="btn btn-flat" href="#">Book now</a> -->
+    <button type="button" class="btn btn-primary btn-lg">Book a Cat</button>
+    </div>
+
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
