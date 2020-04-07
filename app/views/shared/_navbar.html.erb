@@ -23,20 +23,16 @@
       <li class="nav-item dropdown">
         <!-- && @user.avatar.key?         -->
         <% if user_signed_in? %>
-
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <% end %>
           <!-- image_tag ("https://kitt.lewagon.com/placeholder/users/ssaunier" -->
             <!-- image_tag "cl_image_path user.key" -->
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "My bookings as client", bookings_path, class: "dropdown-item" %>
-          <%= link_to "My bookings as owner", owner_bookings_path, class: "dropdown-item" %>
-          <!-- if @user.cat != nil -->
-          <%= link_to "My cats as owner", owner_cats_path, class: "dropdown-item" %>
-          <!-- if @user.cat != nil -->
-          <%= link_to "Create a cat as owner", new_owner_cat_path, class: "dropdown-item " %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item " %>
-          <!-- if @user.cat != nil -->
+          <%= link_to "My bookings as owner", owner_bookings_path, class: "dropdown-item" if current_user.cats.any? %>
+          <%= link_to "My cats as owner", owner_cats_path, class: "dropdown-item" if current_user.cats.any? %>
+          <%= link_to "Create a cat as owner", new_owner_cat_path, class: "dropdown-item" if current_user.cats.any? %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item " if user_signed_in? %>
         </div>
       </li>
     </ul>
