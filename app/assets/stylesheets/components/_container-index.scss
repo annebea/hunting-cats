@@ -1,0 +1,19 @@
+.container-index {
+  display:grid;
+  flex-direction: row;
+  width: 1200px;
+  margin: 50px auto;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+}
+
+.container-header {
+  display: flex;
+  justify-content: center;
+}
+
+// div {
+//   border: 1px red solid;
+// }
