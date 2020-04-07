@@ -9,7 +9,7 @@
   <div class="column-left">
     <div class="card-trip" >
     <div>
-      <img  src="http://loremflickr.com/800/280/chat" alt="This is a hunting cat">
+       <%= cl_image_tag @cat.photo.key, height: 300, width: 500, crop: :fill %>
     </div>
       <div class="card-trip-infos">
         <div> <h5 class="card-trip .card-trip-infos"> <%= @cat.name.upcase %></h5> </div>
@@ -18,11 +18,6 @@
         <div> <h2 > Performance: <%= @cat.performance %> </h2></div>
         <div> <h2 class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </h2></div>
         <div> <h2 > Status: <%= @cat.status %> </h2></div>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
           <div>
            <%= link_to "Back to index", cats_path %>
           </div>

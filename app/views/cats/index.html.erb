@@ -33,7 +33,7 @@
 <% @cats.each do |cat| %>
   <div class="card-trip" >
     <div>
-      <img  src="http://loremflickr.com/280/280/cats" alt="This is a hunting cat">
+      <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
     </div>
     <div class="card-trip-infos">
       <div> <h5 class="card-trip .card-trip-infos"> <%= cat.name.upcase %></h5> </div>
