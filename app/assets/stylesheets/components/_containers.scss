@@ -4,16 +4,17 @@
   width: 1200px;
   margin: 50px auto;
   justify-content: space-between;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
 
 }
 
 .container-header {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
-// div {
-//   border: 1px red solid;
-// }
+.container-show {
+  margin-top: 50px;
+}
