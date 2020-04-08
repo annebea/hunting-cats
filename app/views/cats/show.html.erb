@@ -22,54 +22,26 @@
            <%= link_to "Back to index", cats_path %>
           </div>
       </div>
-</div>
+    </div>
 
   </div>
+
   <div class="column-right">
-
     <div>
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <%= simple_form_for [@cat, @booking] do |f| %>
         <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" placeholder="From" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i> date
-          </button>
+            <%= f.input :starting_date %>
+            <%= f.input :ending_date %>
+            <%= f.submit "Book a cat", class: "btn btn-primary btn-lg" %>
+            <i class="fas fa-search"></i>
         </div>
       <% end %>
     </div>
-
-    <div>
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" placeholder="To" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i> date
-          </button>
-        </div>
-      <% end %>
-
-
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-      <div class="card-header">Planner</div>
-      <div class="card-body">
-        <h5 class="card-title">Availability</h5>
-        <p class="card-text">Availability Planner will take place here.</p>
-      </div>
-    </div>
-
-    <div>
-    <!-- <a class="btn btn-flat" href="#">Book now</a> -->
-    <button type="button" class="btn btn-primary btn-lg">Book a Cat</button>
-    </div>
-
-    </div>
-
-
-
 
 
   </div>
 </div>
+
 
 
 
