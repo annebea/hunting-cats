@@ -1,44 +1,33 @@
 <div class="container-header">
-<div><h1>The cat :</h1></div>
-<div><h1> <%= @cat.name %></h1></div>
-
+  <h1><%= @cat.name %></h1>
 </div>
-
+<div>
+ <%= link_to "Back to index", cats_path %>
+</div>
 <div class="container">
-<div class="row">
-  <div class="column-left">
-    <div class="card-trip" >
-    <div>
-       <%= cl_image_tag @cat.photo.key, height: 300, width: 500, crop: :fill %>
-    </div>
-      <div class="card-trip-infos">
-        <div> <h5 class="card-trip .card-trip-infos"> <%= @cat.name.upcase %></h5> </div>
-        <div> <h2 > Description: <%= @cat.description %> </h2> </div>
-        <div> <h2 > Breed: <%= @cat.breed %> </h2> </div>
-        <div> <h2 > Performance: <%= @cat.performance %> </h2></div>
-        <div> <h2 class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </h2></div>
-        <div> <h2 > Status: <%= @cat.status %> </h2></div>
+  <div class="row">
+    <div class="col-8">
+      <div class="card-trip" >
+        <%= cl_image_tag @cat.photo.key, height: 300, width: 500, crop: :fill %>
+        <div class="card-trip-infos">
           <div>
-           <%= link_to "Back to index", cats_path %>
+            <p> Description: <%= @cat.description %> </p>
+            <p> Breed: <%= @cat.breed %> </p>
+            <p> Performance: <%= @cat.performance %> </p>
+            <p class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </p>
+            <p> Status: <%= @cat.status %> </p>
           </div>
+        </div>
       </div>
     </div>
-
-  </div>
-
-  <div class="column-right">
-    <div>
+    <div class="col-4">
       <%= simple_form_for [@cat, @booking] do |f| %>
-        <div class="search-form-control form-group">
-            <%= f.input :starting_date %>
-            <%= f.input :ending_date %>
-            <%= f.submit "Book a cat", class: "btn btn-primary btn-lg" %>
-            <i class="fas fa-search"></i>
-        </div>
+
+          <%= f.input :starting_date %>
+          <%= f.input :ending_date %>
+          <%= f.submit "Book a cat", class: "btn btn-primary btn-lg" %>
       <% end %>
     </div>
-
-
   </div>
 </div>
 
