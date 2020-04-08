@@ -1,53 +1,24 @@
-
-<div>
-<div class="container-header">
-<h1>List of cats</h1>
-</div>
-
-<!-- <div class="container-header">
-
-  <div class="row">
-    <div class="column">
-        <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-          <input class="form-control string required" placeholder="Place" type="text" name="search[query]" id="search_query" />
-        </div>
-      <% end %>
-    </div>
-
-    <div class="column">
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" placeholder="Date" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i> Search
-        </button>
-      </div>
-    <% end %>
-    </div>
-  </div>
-</div> -->
-
+<h1 class="container-header">List of cats</h1>
 
 <div class="container-index">
-<% @cats.each do |cat| %>
-  <div class="card-trip" >
-    <div>
-      <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
-    </div>
-    <div class="card-trip-infos">
-      <div> <h5 > <%= cat.name.upcase %></h5> </div>
-      <div> <h2 > Description: <%= cat.description %>  </h2> </div>
-      <div> <h2 > Breed: <%= cat.breed %> </h2> </div>
-      <div> <h2 > Performance: <%= cat.performance %> </h2></div>
-      <div> <h2 class="card-trip-pricing" > price per day: <%= cat.price_per_day %> € </h2></div>
-      <div> <h2 > Status: <%= cat.status %> </h2></div>
+  <% @cats.each do |cat| %>
+    <div class="card-trip" >
       <div>
-       <%= link_to "Details", cat_path(cat) %>
+        <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
       </div>
-    </div>
-</div>
-<% end %>
+      <div class="card-trip-infos">
+        <div> <h5 > <%= cat.name.upcase %></h5> </div>
+        <div> <h2 > Description: <%= cat.description %>  </h2> </div>
+        <div> <h2 > Breed: <%= cat.breed %> </h2> </div>
+        <div> <h2 > Performance: <%= cat.performance %> </h2></div>
+        <div> <h2 class="card-trip-pricing" > price per day: <%= cat.price_per_day %> € </h2></div>
+        <div> <h2 > Status: <%= cat.status %> </h2></div>
+        <div>
+         <%= link_to "Details", cat_path(cat) %>
+        </div>
+      </div>
+  </div>
+  <% end %>
 </div>
 
-<%= render 'shared/footer' %>
+
