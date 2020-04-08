@@ -1,6 +1,6 @@
 <div class="container-header">
-<div><h1>The cat :</h1></div>
-<div><h1> <%= @cat.name %></h1></div>
+<h1>The cat : <%= @cat.name %></h1>
+
 
 </div>
 
@@ -12,12 +12,12 @@
        <%= cl_image_tag @cat.photo.key, height: 300, width: 500, crop: :fill %>
     </div>
       <div class="card-trip-infos">
-        <div> <h5 class="card-trip .card-trip-infos"> <%= @cat.name.upcase %></h5> </div>
-        <div> <h2 > Description: <%= @cat.description %> </h2> </div>
-        <div> <h2 > Breed: <%= @cat.breed %> </h2> </div>
-        <div> <h2 > Performance: <%= @cat.performance %> </h2></div>
-        <div> <h2 class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </h2></div>
-        <div> <h2 > Status: <%= @cat.status %> </h2></div>
+        <div> <h2 class="card-trip card-trip-infos"> <%= @cat.name.upcase %></h2> </div>
+        <div> <p > Description: <%= @cat.description %> </p> </div>
+        <div> <p > Breed: <%= @cat.breed %> </p> </div>
+        <div> <p > Performance: <%= @cat.performance %> </p></div>
+        <div> <p class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </p></div>
+        <div> <p > Status: <%= @cat.status %> </p></div>
           <div>
            <%= link_to "Back to index", cats_path %>
           </div>
