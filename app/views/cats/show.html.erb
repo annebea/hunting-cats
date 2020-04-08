@@ -1,76 +1,47 @@
 <div class="container-header">
-<h1>The cat : <%= @cat.name %></h1>
+  <h1><%= @cat.name %></h1>
+</div>
 
-
+<div>
+ <%= link_to "Back to index", cats_path %>
 </div>
 
 <div class="container">
-<div class="row">
-  <div class="column-left">
-    <div class="card-trip" >
-    <div>
-       <%= cl_image_tag @cat.photo.key, height: 300, width: 500, crop: :fill %>
-    </div>
-      <div class="card-trip-infos">
-        <div> <h2 class="card-trip card-trip-infos"> <%= @cat.name.upcase %></h2> </div>
-        <div> <p > Description: <%= @cat.description %> </p> </div>
-        <div> <p > Breed: <%= @cat.breed %> </p> </div>
-        <div> <p > Performance: <%= @cat.performance %> </p></div>
-        <div> <p class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </p></div>
-        <div> <p > Status: <%= @cat.status %> </p></div>
+  <div class="row">
+    <div class="col-8">
+      <div class="card-trip" >
+        <%= cl_image_tag @cat.photo.key, height: 300, width: 500, crop: :fill %>
+        <div class="card-trip-infos">
           <div>
-           <%= link_to "Back to index", cats_path %>
+            <p> Description: <%= @cat.description %> </p>
+            <p> Breed: <%= @cat.breed %> </p>
+            <p> Performance: <%= @cat.performance %> </p>
+            <p class="card-trip-pricing" > price per day: <%= @cat.price_per_day %> € </p>
+            <p> Status: <%= @cat.status %> </p>
           </div>
+        </div>
       </div>
+    </div>
+    <div class="col-4">
+      <%= simple_form_for [@cat, @booking] do |f| %>
+        <div class="search-form-control form-group">
+          <%= f.input :starting_date %>
+          <%= f.input :ending_date %>
+          <%= f.submit "Book a cat", class: "btn btn-primary btn-lg" %>
+          <i class="fas fa-search"></i>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
-  </div>
-  <div class="column-right">
-
-    <div>
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" placeholder="From" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i> date
-          </button>
-        </div>
-      <% end %>
-    </div>
-
-    <div>
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" placeholder="To" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i> date
-          </button>
-        </div>
-      <% end %>
 
 
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+
+<!--     <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
       <div class="card-header">Planner</div>
       <div class="card-body">
         <h5 class="card-title">Availability</h5>
         <p class="card-text">Availability Planner will take place here.</p>
       </div>
-    </div>
-
-    <div>
-    <!-- <a class="btn btn-flat" href="#">Book now</a> -->
-    <button type="button" class="btn btn-primary btn-lg">Book a Cat</button>
-    </div>
-
-    </div>
-
-
-
-
-
-  </div>
-</div>
-
-
-
-
+    </div> -->
