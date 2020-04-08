@@ -10,7 +10,8 @@ class BookingsController < ApplicationController
     @cat = Cat.find(params[:cat_id])
     @booking.user = current_user
     @booking.cat = @cat
-    # @booking.total_price = (ending_date - starting_date)
+    @booking.total_price = (@booking.ending_date - @booking.starting_date)* @cat.price_per_day
+    @booking.status = 'reserved'
     if @booking.save
       redirect_to bookings_path
     else
