@@ -36,15 +36,12 @@
       <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
     </div>
     <div class="card-trip-infos">
-      <div> <h5 > <%= cat.name.upcase %></h5> </div>
+      <div> <a href="cats/<%=cat.id%>" > <%= cat.name.upcase %> </a> </div>
       <div> <h2 > Description: <%= cat.description %>  </h2> </div>
       <div> <h2 > Breed: <%= cat.breed %> </h2> </div>
       <div> <h2 > Performance: <%= cat.performance %> </h2></div>
       <div> <h2 class="card-trip-pricing" > price per day: <%= cat.price_per_day %> € </h2></div>
       <div> <h2 > Status: <%= cat.status %> </h2></div>
-      <div>
-       <%= link_to "Details", cat_path(cat) %>
-      </div>
     </div>
 </div>
 <% end %>
