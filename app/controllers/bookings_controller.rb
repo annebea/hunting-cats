@@ -7,11 +7,12 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @cat = Cat.find(params[:cat_id])
+    @cat = Cat.find(params[:cat_id])
     @booking.user = current_user
     @booking.cat = @cat
+    # @booking.total_price = (ending_date - starting_date)
     if @booking.save
-      redirect_to cats_path
-      raise
+      redirect_to bookings_path
     else
       render :new
     end
