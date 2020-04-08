@@ -46,27 +46,27 @@ user6 = User.new(email: 'anne@gmail.com', password: 'azerty', first_name: 'Anne'
 user6.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/anne.jpeg')), filename: 'anne.jpeg', content_type: 'image/jpeg')
 user6.save!
 
-cat1 = Cat.create(name: 'Dolby', description: 'Black and white cat', breed: 'Gouttiere', performance: 3, price_per_day: 20, status: 'available', age: 12,user_id: 3)
+cat1 = Cat.create(name: 'Dolby', description: 'Black and white cat', breed: 'Gouttiere', performance: 3, price_per_day: 20, status: 'available', age: 12, user_id: user2)
 cat1.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/dolby.jpg')), filename: 'dolby.jpg', content_type: 'image/jpg')
 cat1.save!
 
-cat2 = Cat.create(name: 'Iago', description: 'Awesome hunter', breed: 'Bengal', performance: 7, price_per_day: 30, status: 'available', age: 6, user_id: 3)
+cat2 = Cat.create(name: 'Iago', description: 'Awesome hunter', breed: 'Bengal', performance: 7, price_per_day: 30, status: 'available', age: 6, user_id: user2)
 cat2.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/iago.jpg')), filename: 'iago.jpg', content_type: 'image/jpg')
 cat2.save!
 
-cat3 = Cat.create(name: 'Moustache', description: 'Great at hunting', breed: 'Bengal', performance: 5, price_per_day: 26, status: 'available', age: 3, user_id: 5)
+cat3 = Cat.create(name: 'Moustache', description: 'Great at hunting', breed: 'Bengal', performance: 5, price_per_day: 26, status: 'available', age: 3, user_id: user4)
 cat3.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/moustache.jpg')), filename: 'moustache.jpg', content_type: 'image/jpg')
 cat3.save!
 
-cat4 = Cat.create(name: 'Poutine', description: 'THE BEST', breed: 'Maine coon', performance: 10, price_per_day: 45, status: 'available', age: 10, user_id: 5)
+cat4 = Cat.create(name: 'Poutine', description: 'THE BEST', breed: 'Maine coon', performance: 10, price_per_day: 45, status: 'available', age: 10, user_id: user4)
 cat4.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/poutine.jpg')), filename: 'poutine.jpg', content_type: 'image/jpg')
 cat4.save!
 
-cat5 = Cat.create(name: 'Staline', description: 'Mice, be scared!', breed: 'Bengal', performance: 7, price_per_day: 35, status: 'available', age: 8, user_id: 5)
+cat5 = Cat.create(name: 'Staline', description: 'Mice, be scared!', breed: 'Bengal', performance: 7, price_per_day: 35, status: 'available', age: 8, user_id: user4)
 cat5.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/staline.jpg')), filename: 'staline.jpg', content_type: 'image/jpg')
 cat5.save!
 
-cat6 = Cat.create(name: 'Mrs Fluffton', description: 'Hunt with style', breed: 'Brittish', performance: 6, price_per_day: 32, status: 'available', age: 5, user_id: 7)
+cat6 = Cat.create(name: 'Mrs Fluffton', description: 'Hunt with style', breed: 'Brittish', performance: 6, price_per_day: 32, status: 'available', age: 5, user_id: user6)
 cat6.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/mrs-fluffton.jpg')), filename: 'mrs-fluffton.jpg', content_type: 'image/jpg')
 cat6.save!
 
