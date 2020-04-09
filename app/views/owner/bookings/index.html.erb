@@ -1,0 +1,25 @@
+<h1 class="container-header page-title">Bookings of my cats</h1>
+
+<div class="container-index-booking">
+  <% current_user.owner_bookings.each do |booking| %>
+    <div class="card-product" >
+      <%= cl_image_tag booking.cat.photo.key, crop: :fill %>
+      <div class="card-product-infos-bookings">
+        <div>
+          <h1><%= booking.cat.name %> </h1>
+          <br>
+          <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
+          <br>
+          <% if booking.status == 'pending' %>
+            <%= link_to "Accept" %>
+            <%= link_to "Reject" %>
+            <!-- CODE TO ADD IN BOTH LINES ABOVE TO CALL OWNER/BOOKINGS_CONTROLLER ACCEPT AND REJECT METHOD -->
+          <% end %>
+        </div>
+        <div>
+          <p class="price"> <%= booking.total_price %> €</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
