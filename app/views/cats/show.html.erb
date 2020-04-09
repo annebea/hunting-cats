@@ -11,13 +11,13 @@
             <p> Performance: <%= @cat.performance %> </p>
             <p> <%= @cat.status %> </p>
           </div>
-          <h2 > <%= @cat.price_per_day %> € / day </h2>
+          <h2 class="price"> <%= @cat.price_per_day %> € / day </h2>
         </div>
       </div>
     </div>
     <div class="col-4">
       <div class="form-show">
-        <h3>When do you need your hunter</h3>
+        <h3>When do you need your hunter?</h3>
           <div class="form-content">
             <%= simple_form_for [@cat, @booking] do |f| %>
             <%= f.input :starting_date %>
