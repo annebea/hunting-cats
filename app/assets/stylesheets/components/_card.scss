@@ -46,12 +46,7 @@
   position: relative;
 }
 
-.card-trip .card-trip-mouses {
-  padding-bottom: 16px;
-  display: flex;
-  justify-content: start;
-  position: relative;
-}
+
 
 .form-show {
   background-color: white;
@@ -82,4 +77,11 @@
       text-decoration: none;
     }
   }
+  .card-trip-mouses {
+    padding-top: 10px;
+  }
+}
+
+.card-trip-mouses> img {
+  width: 50px;
 }
