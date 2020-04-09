@@ -1,3 +1,7 @@
+.card-show > img {
+  height: 400px;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -9,10 +13,6 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
-}
-
-.card-show > img {
-  height: 400px;
 }
 
 .card-trip h2 {
@@ -29,8 +29,22 @@
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: flex-end;
-  // position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-trip .card-trip-mouses {
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: start;
+  position: relative;
 }
