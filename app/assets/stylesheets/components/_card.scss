@@ -76,9 +76,9 @@
   }
   a {
     color: black;
-    &:hover{
+    &:hover {
+      color: $orange;
       text-decoration: none;
-      opacity: 0.7;
     }
   }
 }
