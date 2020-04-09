@@ -1,12 +1,11 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @cat = Cat.find(params[:cat_id])
     @cat = Cat.find(params[:cat_id])
     @booking.user = current_user
     @booking.cat = @cat
@@ -22,7 +21,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:starting_date,:ending_date)
+    params.require(:booking).permit(:starting_date,:ending_date,:status)
   end
 
 end

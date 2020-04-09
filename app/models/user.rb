@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :bookings
   has_many :cats
-
+  has_many :owner_bookings, through: :cats, source: :bookings
+  # va chercher dans le modele cats tous les bookings correspondants et créer la méthode correspondante owner_bookings
   has_one_attached :avatar
 end

@@ -1,0 +1,12 @@
+.btn-show {
+  background-color: $orange;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  &:hover {
+    background-color: $orange;
+    opacity: 0.7;
+
+  }
+}
