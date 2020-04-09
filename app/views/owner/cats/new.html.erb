@@ -1,4 +1,6 @@
 <div class="container">
+  <div class="row">
+    <div class="col-4">
   <%= simple_form_for [:owner ,@cat] do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
@@ -10,4 +12,6 @@
   <div class="button"> <%= f.submit %> </div>
 <% end %>
 <%= link_to"back to my cat's list", cats_path %>
+</div>
+</div>
 </div>
