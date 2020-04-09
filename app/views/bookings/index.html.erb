@@ -6,7 +6,7 @@
       <% @bookings.each do |booking| %>
         <% if booking.user_id == current_user.id %>
           <div class="card-product" >
-            <%= cl_image_tag booking.cat.photo.key, crop: :fill %>
+            <%= cl_image_tag booking.cat.photo.key, width: 300, height: 200, crop: :fill %>
             <div class="card-product-infos-bookings">
               <div>
                 <h1><%= booking.cat.name %> </h1>
