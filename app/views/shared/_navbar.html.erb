@@ -11,12 +11,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to 'All Cats', cats_path, class: "btn btn-outline-primary mx-4"%>
+        <%= link_to 'ALL CATS', cats_path, class: "lien_navbar mx-4"%>
         <% if user_signed_in? %>
-          <%= link_to 'My Bookings',  bookings_path, class: "btn btn-outline-primary mx-4"%>
-          <%= link_to 'Add a Cat',  new_owner_cat_path, class: "btn btn-outline-primary mx-4"%>
-          <%= link_to 'All my Cat',  owner_cats_path, class: "btn btn-outline-primary mx-4"%>
-          <%= link_to "My rented cats bookings", owner_bookings_path, class: "btn btn-outline-primary mx-4"%>
+          <%= link_to 'MY BOOKINGS |',  bookings_path, class: "lien_navbar mx-4" %>
+          <%= link_to 'ADD A CAT',  new_owner_cat_path, class: "lien_navbar mx-4"%>
+          <%= link_to 'MY CATS',  owner_cats_path, class: "lien_navbar mx-4"%>
+          <%= link_to "MY CATS RENTS", owner_bookings_path, class: "lien_navbar mx-4"%>
         <% else %>
         <% end %>
         <%= link_to 'Login', new_user_session_path, class: "btn btn-primary mx-4" unless user_signed_in? %>
