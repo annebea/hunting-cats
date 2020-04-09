@@ -19,8 +19,9 @@ class Owner::CatsController < ApplicationController
 
   private
 
-  def booking_params
-    params.require(:cat).permit(:name, :description, :breed, :age,:price_per_day, :status)
+  def cats_params
+    params.require(:cat).permit(:name, :description, :breed, :age,:price_per_day)
+    # pas de status dans les cat_params car available par défaut
   end
 
 end
