@@ -8,14 +8,14 @@ Rails.application.routes.draw do
 
   namespace :owner do
     resources :cats, only: [:index, :new, :create]
-    resources :bookings, only: [:index]
-  end
-
-  resources :bookings, only: [:index] do
-    member do
-      patch :accept
-      patch :decline
+    resources :bookings, only: [:index] do
+      member do
+        patch :accept
+        patch :decline
+      end
     end
   end
+
+  resources :bookings, only: [:index]
 
 end
