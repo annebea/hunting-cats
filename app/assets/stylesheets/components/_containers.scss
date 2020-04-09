@@ -1,13 +1,26 @@
-.container-index {
-  display:grid;
+.main-container {
+  display: flex;
+  padding: 30px 35px 0 35px;
+}
+
+.main-container .container-index {
+  flex: 1;
+  display: grid;
   flex-direction: row;
-  width: 1200px;
-  margin: 50px auto;
   justify-content: space-between;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
+  grid-gap: 35px;
+  padding: 0 35px 0 0;
 
 }
+
+#map {
+  height: 100vh; /* viewport height */
+  position: sticky;
+  top:0;
+  border-radius: 5px;
+}
+
 
 .container-header {
   display: flex;

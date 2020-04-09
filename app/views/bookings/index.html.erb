@@ -2,11 +2,15 @@
 
 <div class="container-index-booking">
       <% current_user.bookings.each do |booking| %>
-        <div class="card-product" >
-          <%= cl_image_tag booking.cat.photo.key, crop: :fill %>
-          <div class="card-product-infos-bookings">
-            <div>
-              <h1><%= booking.cat.name %> </h1>
+          <div class="card-product" >
+            <%= cl_image_tag booking.cat.photo.key, width: 300, height: 200, crop: :fill %>
+            <div class="card-product-infos-bookings">
+              <div>
+                <h1><%= link_to booking.cat.name, cat_path(booking.cat) %> </h1>
+                <div>
+                  <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
+                </div>
+              </div>
               <div>
                 <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
               </div>
