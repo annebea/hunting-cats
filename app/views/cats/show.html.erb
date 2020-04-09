@@ -5,30 +5,27 @@
         <%= cl_image_tag @cat.photo.key, height: 300, width: 500, crop: :fill %>
         <div class="card-trip-infos">
           <div>
-            <h2><%= @cat.name %></h2>
-            <p> <%= @cat.description %> </p>
+            <h1><%= @cat.name %></h1>
+            <h2 class="subtitle"> <%= @cat.description %> </h2>
             <p> Breed: <%= @cat.breed %> </p>
             <p> Performance: <%= @cat.performance %> </p>
-            <p class="card-trip-pricing" > <%= @cat.price_per_day %> € / day </p>
-            <p> Status: <%= @cat.status %> </p>
+            <p> <%= @cat.status %> </p>
           </div>
+          <h2 > <%= @cat.price_per_day %> € / day </h2>
         </div>
       </div>
     </div>
     <div class="col-4">
-      <%= simple_form_for [@cat, @booking] do |f| %>
-
-          <%= f.input :starting_date %>
-          <%= f.input :ending_date %>
-          <%= f.submit "Book a cat", class: "btn btn-primary btn-lg" %>
-      <% end %>
+      <div class="form-show">
+        <h3>When do you need your hunter</h3>
+          <div class="form-content">
+            <%= simple_form_for [@cat, @booking] do |f| %>
+            <%= f.input :starting_date %>
+            <%= f.input :ending_date %>
+            <%= f.submit "Book a cat", class: "btn-lg btn-block btn-show" %>
+          <% end %>
+          </div>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-

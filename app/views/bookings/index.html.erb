@@ -1,21 +1,21 @@
 <div class="container-header">
-  <h1 class="title-color">MY BOOKINGS</h1>
+  <h1 class="page-title">MY BOOKINGS</h1>
 </div>
 
-<div class="container-index">
+<div class="container-index-booking">
       <% @bookings.each do |booking| %>
         <% if booking.user_id == current_user.id %>
           <div class="card-product" >
             <%= cl_image_tag booking.cat.photo.key, height: 300, width: 500, crop: :fill %>
-            <div class="card-product-infos">
+            <div class="card-product-infos-bookings">
               <div>
-                <h2> <%= booking.cat.name %> </h2>
-                <p> From :<br> <%= booking.starting_date %> </p>
-                <p> To :<br> <%= booking.ending_date %> </p>
-                <p> Price : <%= booking.total_price %> €</p>
-                <!-- <p> Status: <%= booking.status %> </p> -->
-
+                <h1><%= booking.cat.name %> </h1>
+                <p>from <%= booking.starting_date %> to <%= booking.ending_date %> </p>
+                <% totaltime = booking.ending_date - booking.starting_date %>
+                <p> <%= totaltime %> / days</p>
               </div>
+              <p class="price"> <%= booking.total_price %> €</p>
+                <!-- <p> Status: <%= booking.status %> </p> -->
             </div>
           </div>
         <% end %>

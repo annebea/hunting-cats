@@ -1,11 +1,9 @@
-.card-show > img {
-  height: 400px;
-}
+// used in cat index and cat show
 
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border-radius: 5px;
 }
 
@@ -15,10 +13,23 @@
   object-fit: cover;
 }
 
+.card-show > img {
+  height: 400px;
+}
+
+.card-show .subtitle {
+  font-weight: lighter;
+  padding-bottom: 10px;
+}
+
 .card-trip h2 {
   font-size: 25px;
   font-weight: bold;
   margin: 0;
+}
+
+.card-trip h1 {
+  font-weight: bold;
 }
 
 .card-trip p {
@@ -35,16 +46,39 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
 .card-trip .card-trip-mouses {
   padding-bottom: 16px;
   display: flex;
   justify-content: start;
   position: relative;
+
+.form-show {
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  h3 {
+    text-align: center;
+  }
+  .form-content {
+    padding-top: 20px;
+  }
+}
+
+.card-trip .card-trip-infos-index-cats {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  h4 {
+    font-weight: bold;
+  }
+  a {
+    color: black;
+    &:hover{
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  }
 }
