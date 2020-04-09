@@ -21,8 +21,9 @@ class Owner::CatsController < ApplicationController
   private
 
   def cats_params
-    params.require(:cat).permit(:name, :description, :breed, :performance, :age, :price_per_day)
+    params.require(:cat).permit(:name, :description, :breed, :performance, :age, :price_per_day, :photo)
     # pas de status dans les cat_params car available par défaut
   end
+
 
 end
