@@ -13,12 +13,21 @@
                 <div>
                   <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
                 </div>
-                <div>
-                  <p> Status: <%= booking.status %> </p>
-                </div>
               </div>
               <div>
                 <p class="price"> <%= booking.total_price %> €</p>
+              </div>
+                  <div>
+                  <p class="price">
+                    <% case booking.status %>
+                      <% when "pending" %>
+                       <i class="fas fa-hourglass-half"></i>
+                      <% when "accepted" %>
+                        <i class="fas fa-check"></i>
+                      <% when "rejected" %>
+                        <i class="fas fa-times"></i>
+                    <% end %>
+                  </p>
                 </div>
             </div>
           </div>
