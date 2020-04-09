@@ -11,8 +11,10 @@
         <div>
          <h3><%= link_to cat.name.upcase, cat_path(cat) %></h3>
           <div class="card-trip-mouses">
-            <% cat.performance.times do %>
-              <%= image_tag "pink_mouse.svg", :width => "7%" %>
+            <% unless cat.performance.nil? %>
+              <% cat.performance.times do %>
+                <%= image_tag "pink_mouse.svg", :width => "7%" %>
+              <% end %>
             <% end %>
           </div>
         </div>

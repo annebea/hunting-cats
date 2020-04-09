@@ -1,17 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-  <%= simple_form_for [:owner ,@cat] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :breed %>
-  <%= f.input :age %>
-  <%= f.input :performance %>
-  <%= f.input :price_per_day %>
-  <%= f.input :photo, as: :file %>
-  <div class="button"> <%= f.submit %> </div>
-<% end %>
-<%= link_to"back to my cat's list", cats_path %>
-</div>
-</div>
+      <%= simple_form_for [:owner ,@cat] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :breed %>
+        <%= f.input :age %>
+        <%= f.input :price_per_day %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class: "btn btn-primary mb-4" %>
+     <% end %>
+    </div>
+  </div>
 </div>
