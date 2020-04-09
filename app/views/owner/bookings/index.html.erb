@@ -11,8 +11,8 @@
           <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
           <br>
           <% if booking.status == 'pending' %>
-            <%= link_to "Accept" %>
-            <%= link_to "Reject" %>
+            <p><%= link_to "Accept" %></p>
+            <p><%= link_to "Reject" %></p>
             <!-- CODE TO ADD IN BOTH LINES ABOVE TO CALL OWNER/BOOKINGS_CONTROLLER ACCEPT AND REJECT METHOD -->
           <% end %>
         </div>
