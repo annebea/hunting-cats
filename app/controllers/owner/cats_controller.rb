@@ -9,8 +9,9 @@ class Owner::CatsController < ApplicationController
   end
 
   def create
-    @cat = Cat.new(cat_params)
-    if @cat.save
+    @cat = Cat.new(cats_params)
+    @cat.user = current_user
+    if @cat.save!
       redirect_to owner_cats_path
     else
       render "new"
@@ -20,7 +21,7 @@ class Owner::CatsController < ApplicationController
   private
 
   def cats_params
-    params.require(:cat).permit(:name, :description, :breed, :age,:price_per_day)
+    params.require(:cat).permit(:name, :description, :breed, :performance, :age, :price_per_day)
     # pas de status dans les cat_params car available par défaut
   end
 
