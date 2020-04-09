@@ -72,8 +72,9 @@ cat6.save!
 
 booking1 = Booking.create(cat_id: cat4.id, user_id: user0.id, starting_date: Date.new(2020,4,18), ending_date: Date.new(2020,4,19), status: 'pending', total_price: 45)
 booking2 = Booking.create(cat_id: cat4.id, user_id: user0.id, starting_date: Date.new(2020,4,26), ending_date: Date.new(2020,4,29), status: 'pending', total_price: 135)
-booking3 = Booking.create(cat_id: cat5.id, user_id: user3.id, starting_date: Date.new(2020,4,25), ending_date: Date.new(2020,4,28), status: 'pending', total_price: 105)
+booking3 = Booking.create(cat_id: cat5.id, user_id: user3.id, starting_date: Date.new(2020,4,25), ending_date: Date.new(2020,4,28), status: 'accepted', total_price: 105)
 booking4 = Booking.create(cat_id: cat5.id, user_id: user3.id, starting_date: Date.new(2020,5,5), ending_date: Date.new(2020,5,7), status: 'pending', total_price: 70)
-booking5 = Booking.create(cat_id: cat1.id, user_id: user1.id, starting_date: Date.new(2020,5,2), ending_date: Date.new(2020,4,4), status: 'pending', total_price: 40)
-booking6 = Booking.create(cat_id: cat2.id, user_id: user5.id, starting_date: Date.new(2020,4,26), ending_date: Date.new(2020,4,27), status: 'pending', total_price: 30)
+booking5 = Booking.create(cat_id: cat3.id, user_id: user3.id, starting_date: Date.new(2020,5,5), ending_date: Date.new(2020,5,7), status: 'rejected', total_price: 70)
+booking6 = Booking.create(cat_id: cat1.id, user_id: user1.id, starting_date: Date.new(2020,5,2), ending_date: Date.new(2020,4,4), status: 'pending', total_price: 40)
+booking7 = Booking.create(cat_id: cat2.id, user_id: user5.id, starting_date: Date.new(2020,4,26), ending_date: Date.new(2020,4,27), status: 'pending', total_price: 30)
 
