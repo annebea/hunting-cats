@@ -79,7 +79,7 @@
   }
 }
 
-.card-trip .card-trip-infos-index-cats {
+.card-trip-index .card-trip-infos-index-cats {
   padding: 20px 25px 15px 25px;
   display: flex;
   justify-content: space-between;
@@ -113,4 +113,47 @@
 
 .card-trip-mouses> img {
   width: 50px;
+}
+
+.card-trip-index {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.card-trip-index > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-show-index > img {
+  height: 400px;
+}
+
+.card-show-index .subtitle {
+  font-weight: lighter;
+  padding-bottom: 10px;
+}
+
+.card-trip-index .subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  color: $gray;
+}
+
+.card-trip-index h1 {
+  font-size: 45px;
+  font-weight: bold;
+  color: $gray;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-trip-index p {
+  font-size: 20px;
+  opacity: .7;
+  margin: 0;
+  color: $gray;
 }
