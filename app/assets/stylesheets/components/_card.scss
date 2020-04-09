@@ -1,3 +1,5 @@
+// used in cat index and cat show
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -54,5 +56,23 @@
   }
   .form-content {
     padding-top: 20px;
+  }
+}
+
+.card-trip .card-trip-infos-index-cats {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  h4 {
+    font-weight: bold;
+  }
+  a {
+    color: black;
+    &:hover{
+      text-decoration: none;
+      opacity: 0.7;
+    }
   }
 }

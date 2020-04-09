@@ -1,3 +1,5 @@
+// used in booking index
+
 .card-product {
   overflow: hidden;
   height: 160px;
@@ -30,3 +32,20 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.card-product .card-product-infos-bookings {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  .price {
+    font-weight: bold;
+    font-size: 50px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
