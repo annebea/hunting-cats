@@ -7,14 +7,15 @@
         <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
       </div>
 
-      <div class="card-trip-infos card-trip-infos-index-cats">
+      <div class="card-trip-infos-index-cats">
         <div>
-           <h2><%= link_to cat.name.upcase, cat_path(cat) %></h2>
+         <h3><%= link_to cat.name.upcase, cat_path(cat) %></h3>
+          <div class="card-trip-mouses">
+            <% cat.performance.times do %>
+              <%= image_tag "pink_mouse.svg", :width => "7%" %>
+            <% end %>
+          </div>
         </div>
-        <div class="card-trip-mouses">
-        <% cat.performance.times do %>
-          <%= image_tag "pink_mouse.svg", :width => "7%" %>
-        <% end %>
         <h4> <%= cat.price_per_day %> € / day</h4>
       </div>
     </div>

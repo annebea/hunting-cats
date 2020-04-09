@@ -46,12 +46,7 @@
   position: relative;
 }
 
-.card-trip .card-trip-mouses {
-  padding-bottom: 16px;
-  display: flex;
-  justify-content: start;
-  position: relative;
-}
+
 
 .form-show {
   background-color: white;
@@ -67,13 +62,20 @@
 }
 
 .card-trip .card-trip-infos-index-cats {
-  padding: 16px;
+  padding: 20px 25px 15px 25px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  h3 {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 30px;
+  }
   h4 {
     font-weight: bold;
+    margin-bottom: 0;
+    font-size: 25px;
   }
   a {
     color: black;
@@ -82,4 +84,11 @@
       text-decoration: none;
     }
   }
+  .card-trip-mouses {
+    padding-top: 10px;
+  }
+}
+
+.card-trip-mouses> img {
+  width: 50px;
 }
