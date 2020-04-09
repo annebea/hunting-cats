@@ -18,3 +18,13 @@
 .container-show {
   margin-top: 50px;
 }
+
+.container-index-booking {
+  display:grid;
+  flex-direction: row;
+  width: 900px;
+  margin: 50px auto;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+}
