@@ -68,24 +68,27 @@
       color: $orange;
     }
   }
-  .accept a {
-    font-size: 20px;
-    font-weight: bold;
-    color: $green;
-    outline: 0;
-    &:hover {
-      text-decoration: none;
-      color: red;
+
+  .price {
+    .accept {
+      font-size: 20px;
+      font-weight: bold;
+      color: $green;
+      outline: 0;
+      &:hover {
+        text-decoration: none;
+        opacity: 0.7;
+      }
     }
-  }
-  .reject a {
-    font-size: 20px;
-    font-weight: bold;
-    color: $red;
-    outline: 0;
-    &:hover {
-      text-decoration: none;
-      color: red;
+    .reject {
+      font-size: 20px;
+      font-weight: bold;
+      color: $gray;
+      outline: 0;
+      &:hover {
+        text-decoration: none;
+        opacity: 0.7;
+      }
     }
   }
 }
