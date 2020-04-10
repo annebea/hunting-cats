@@ -24,3 +24,18 @@
     text-decoration: none;
   }
 }
+
+.nav-drop {
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.lien-navbar {
+  a {
+    color: $blue;
+    &:hover {
+      color: $orange;
+      text-decoration: none;
+    }
+  }
+}
