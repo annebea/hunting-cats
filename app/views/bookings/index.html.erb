@@ -9,18 +9,20 @@
           <h1><%= link_to booking.cat.name, cat_path(booking.cat) %> </h1>
           <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
         </div>
-        <div class="price">
-          <p><%= booking.total_price %> € </p>
-        </div>
-        <div class="price">
-          <% case booking.status %>
-            <% when "pending" %>
-              <i class="fas fa-hourglass-half pending"></i>
-            <% when "accepted" %>
-              <i class="fas fa-check accepted"></i>
-            <% when "rejected" %>
-              <i class="fas fa-times rejected"></i>
-          <% end %>
+        <div class="price-status">
+          <div class="price">
+            <% case booking.status %>
+              <% when "pending" %>
+                <i class="fas fa-hourglass-half pending"></i>
+              <% when "accepted" %>
+                <i class="fas fa-check accepted"></i>
+              <% when "rejected" %>
+                <i class="fas fa-times rejected"></i>
+            <% end %>
+          </div>
+          <div class="price">
+            <p><%= booking.total_price %> € </p>
+          </div>
         </div>
       </div>
     </div>
