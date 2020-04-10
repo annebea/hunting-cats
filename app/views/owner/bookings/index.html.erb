@@ -6,18 +6,22 @@
       <%= cl_image_tag booking.cat.photo.key, crop: :fill %>
       <div class="card-product-infos-bookings">
         <div>
-          <h1><%= link_to booking.cat.name, cat_path(booking.cat) %> </h1>
-          <br>
+          <div class="name">
+            <h1><%= link_to booking.cat.name, cat_path(booking.cat) %> </h1>
+          </div>
           <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
-          <br>
           <% if booking.status == 'pending' %>
-              <p><%= link_to "Accept" %></p>
-              <p><%= link_to "Reject" %></p>
+            <div class="accept">
+              <%= link_to "Accept"%>
+            </div>
+            <div class="reject">
+              <%= link_to "Reject" %>
+            </div>
             <!-- CODE TO ADD IN BOTH LINES ABOVE TO CALL OWNER/BOOKINGS_CONTROLLER ACCEPT AND REJECT METHOD -->
           <% end %>
         </div>
-        <div>
-          <p class="price"> <%= booking.total_price %> €</p>
+        <div class="price">
+          <p > <%= booking.total_price %> €</p>
         </div>
       </div>
     </div>

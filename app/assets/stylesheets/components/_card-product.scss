@@ -40,17 +40,24 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  .price {
+  .price p {
+    line-height: 1;
     font-weight: bold;
     font-size: 50px;
     color: $orange;
     opacity: 0.8;
   }
+
+  .price i{
+    opacity: 0.8;
+  }
+
   p {
+    padding-top: 10px;
     font-size: 20px;
     color: $gray
   }
-  a {
+  .name a {
     font-size: 60px;
     font-weight: bold;
     color: $gray;
@@ -59,6 +66,26 @@
     &:hover {
       text-decoration: none;
       color: $orange;
+    }
+  }
+  .accept a {
+    font-size: 20px;
+    font-weight: bold;
+    color: $green;
+    outline: 0;
+    &:hover {
+      text-decoration: none;
+      color: red;
+    }
+  }
+  .reject a {
+    font-size: 20px;
+    font-weight: bold;
+    color: $red;
+    outline: 0;
+    &:hover {
+      text-decoration: none;
+      color: red;
     }
   }
 }
