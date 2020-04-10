@@ -55,10 +55,11 @@
 }
 
 .card-trip .price {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: bold;
   margin-right: 10px;
-  color: $orange,
+  color: $gray;
+  margin-bottom: 0;
 }
 
 
@@ -156,4 +157,8 @@
   opacity: .7;
   margin: 0;
   color: $gray;
+}
+
+.mouse-show {
+  padding-top: 20px;
 }
