@@ -15,14 +15,15 @@
         <div class="price">
           <% case booking.status %>
             <% when "pending" %>
-              <i class="fas fa-hourglass-half"></i>
+              <i class="fas fa-hourglass-half pending"></i>
             <% when "accepted" %>
-              <i class="fas fa-check"></i>
+              <i class="fas fa-check accepted"></i>
             <% when "rejected" %>
-              <i class="fas fa-times"></i>
+              <i class="fas fa-times rejected"></i>
           <% end %>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+
