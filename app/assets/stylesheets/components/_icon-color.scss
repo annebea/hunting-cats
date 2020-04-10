@@ -1,11 +1,17 @@
 .accepted {
   color: $success;
+  margin-right: 30px;
+  opacity: 0.8;
 }
 
 .pending {
-  color: $warning;
+  color: $info;
+  margin-right: 30px;
+  opacity: 0.8;
 }
 
 .rejected {
   color: $danger;
+  margin-right: 30px;
+  opacity: 0.8;
 }
