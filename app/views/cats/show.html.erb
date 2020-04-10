@@ -8,10 +8,17 @@
             <h1><%= @cat.name %></h1>
             <h2 class="subtitle"> <%= @cat.description %> </h2>
             <p> Breed: <%= @cat.breed %> </p>
-            <p> Performance: <%= @cat.performance %> </p>
-            <p> <%= @cat.status %> </p>
+            <div class="card-trip-mouses mouse-show">
+              <% unless @cat.performance.nil? %>
+                <% @cat.performance.times do %>
+                  <%= image_tag "pink_mouse.svg", :width => "7%" %>
+                <% end %>
+              <% end %>
+            </div>
           </div>
-          <h2 class="price"> <%= @cat.price_per_day %> € / day </h2>
+          <div>
+            <h2 class="price"> <%= @cat.price_per_day %> € / day </h2>
+          </div>
         </div>
       </div>
     </div>
