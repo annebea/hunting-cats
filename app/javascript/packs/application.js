@@ -25,10 +25,16 @@ require("channels")
 // External imports
 import "bootstrap";
 
+import { initMapbox }       from '../plugins/init_mapbox';
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  // setTimeout(function, timeout) permet de mettre un delai avant d'afficher la map
+  // afin que la div #map aie le temps de prendre la bonne taille
+  setTimeout(initMapbox, 500);
+  initAutocomplete();
 });
