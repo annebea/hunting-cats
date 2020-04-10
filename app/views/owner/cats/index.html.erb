@@ -1,27 +1,28 @@
 <h1 class="container-header page-title">My cats</h1>
-
-<div class="container-index">
-  <% @cats.each do |cat| %>
-    <% if cat.user == current_user %>
-      <div class="card-trip" >
-        <div>
-          <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
-        </div>
-
-        <div class="card-trip-infos-index-cats">
+<div class="container">
+  <div class="container-index-my-cats">
+    <% @cats.each do |cat| %>
+      <% if cat.user == current_user %>
+        <div class="card-trip card-trip-index" >
           <div>
-           <h3><%= link_to cat.name.upcase, cat_path(cat) %></h3>
-            <div class="card-trip-mouses">
-              <% unless cat.performance.nil? %>
-                <% cat.performance.times do %>
-                  <%= image_tag "pink_mouse.svg", :width => "7%" %>
-                <% end %>
-              <% end %>
-            </div>
+            <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
           </div>
-          <h4> <%= cat.price_per_day %> € / day</h4>
+
+          <div class="card-trip-infos-index-cats">
+            <div>
+             <h3><%= link_to cat.name.upcase, cat_path(cat) %></h3>
+              <div class="card-trip-mouses">
+                <% unless cat.performance.nil? %>
+                  <% cat.performance.times do %>
+                    <%= image_tag "pink_mouse.svg", :width => "7%" %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+            <h4> <%= cat.price_per_day %> € / day</h4>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
