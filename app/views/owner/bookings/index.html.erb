@@ -12,10 +12,10 @@
           <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
           <% if booking.status == 'pending' %>
             <div class="accept">
-              <%= link_to "Accept"%>
+              <%= link_to "Accept", accept_owner_booking_path %>
             </div>
             <div class="reject">
-              <%= link_to "Reject" %>
+              <%= link_to "Reject", decline_owner_booking_path %>
             </div>
             <!-- CODE TO ADD IN BOTH LINES ABOVE TO CALL OWNER/BOOKINGS_CONTROLLER ACCEPT AND REJECT METHOD -->
           <% end %>
