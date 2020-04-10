@@ -1,14 +1,15 @@
 <h1 class="container-header page-title">My cats</h1>
 
+
 <div class="container-index">
   <% @cats.each do |cat| %>
     <% if cat.user == current_user %>
-      <div class="card-trip" >
+      <div class="card-trip card-trip-index" >
         <div>
           <%= cl_image_tag cat.photo.key, height: 300, width: 700, crop: :fill %>
         </div>
 
-        <div class="card-trip-infos-index-cats">
+        <div class="card-trip-infos">
           <div>
            <h3><%= link_to cat.name.upcase, cat_path(cat) %></h3>
             <div class="card-trip-mouses">
