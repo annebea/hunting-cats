@@ -31,21 +31,10 @@ const initMapbox = () => {
     if (markers.length) {
       markers.forEach((marker) => {
 
-        // on récupère la popup "infoWindow" au format string
-        const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
-
-        // Create a HTML element for your custom marker
-        const element = document.createElement('div');
-        element.className = 'marker';
-        element.style.backgroundImage = `url('${marker.image_url}')`;
-        element.style.backgroundSize = 'contain';
-        element.style.width = '50px';
-        element.style.height = '50px';
 
         // we give the html to the marker constructor
-        new mapboxgl.Marker(element)
+        new mapboxgl.Marker()
           .setLngLat([ marker.lng, marker.lat ]) // base
-          .setPopup(popup) // for popup
           .addTo(map); // base
       });
 
