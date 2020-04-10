@@ -20,17 +20,13 @@
         <li class="nav-item lien-navbar">
           <%= link_to 'ADD A CAT',  new_owner_cat_path, class: "lien-navbar"%>
         </li>
-     <!--    <li class="nav-item lien-navbar">
-        </li>
-        <li class="nav-item lien-navbar">
-        </li> -->
         <li class="nav-item dropdown nav-drop">
                 <a class="nav-item dropdown-toggle lien-navbar" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   MY OWN CATS
                 </a>
                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                  <%= link_to 'MY CATS',  owner_cats_path, class: "dropdown-item "%>
-                  <%= link_to "MY CATS RENTS", owner_bookings_path, class: "dropdown-item "%>
+                  <%= link_to 'MY CATS',  owner_cats_path, class: "dropdown-item lien-drop "%>
+                  <%= link_to "MY CATS RENTS", owner_bookings_path, class: "dropdown-item lien-drop"%>
                 </div>
               </li>
         <li class="nav-item dropdown">

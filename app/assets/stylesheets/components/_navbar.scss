@@ -44,3 +44,11 @@
   margin-top: 24px;
   padding-top: 0px;
 }
+
+.lien-drop {
+  font-size: 20px;
+  color: $orange;
+  &:hover {
+    color: $blue;
+  }
+}
