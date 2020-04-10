@@ -18,10 +18,12 @@ User.destroy_all
 # )
 # toto.save!
 
+#LE LOUEUR
 user0 = User.new(email: 'huey@gmail.com', password: 'azerty', first_name: 'Huey', last_name: 'Duck', phone: '0230405060')
 user0.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/huey.png')), filename: 'huey.png', content_type: 'image/png')
 user0.save!
 
+#LE PROPRIETAIRE
 user1 = User.new(email: 'dewey@gmail.com', password: 'azerty', first_name: 'Dewey', last_name: 'Duck', phone: '0230405060')
 user1.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/dewey.png')), filename: 'dewey.png', content_type: 'image/png')
 user1.save!
@@ -54,11 +56,11 @@ cat2 = Cat.create(name: 'Iago', description: 'Awesome hunter', breed: 'Bengal', 
 cat2.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/iago.jpg')), filename: 'iago.jpg', content_type: 'image/jpg')
 cat2.save!
 
-cat3 = Cat.create(name: 'Moustache', description: 'Great at hunting', breed: 'Bengal', performance: 2, price_per_day: 26, status: 'available', age: 3, address: '30 boulevard René Laennec, Rennes', user_id: user4.id)
+cat3 = Cat.create(name: 'Moustache', description: 'Great at hunting', breed: 'Bengal', performance: 2, price_per_day: 26, status: 'available', age: 3, address: '30 boulevard René Laennec, Rennes', user_id: user3.id)
 cat3.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/moustache.jpg')), filename: 'moustache.jpg', content_type: 'image/jpg')
 cat3.save!
 
-cat4 = Cat.create(name: 'Poutine', description: 'THE BEST', breed: 'Maine coon', performance: 5, price_per_day: 45, status: 'available', age: 10, address: '30 boulevard René Laennec, Rennes', user_id: user4.id)
+cat4 = Cat.create(name: 'Poutine', description: 'THE BEST', breed: 'Maine coon', performance: 5, price_per_day: 45, status: 'available', age: 10, address: '30 boulevard René Laennec, Rennes', user_id: user1.id)
 cat4.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/poutine.jpg')), filename: 'poutine.jpg', content_type: 'image/jpg')
 cat4.save!
 
@@ -70,10 +72,12 @@ cat6 = Cat.create(name: 'Mrs Fluffton', description: 'Hunt with style', breed: '
 cat6.photo.attach(io: File.open(Rails.root.join('db/fixtures/cats/mrs-fluffton.jpg')), filename: 'mrs-fluffton.jpg', content_type: 'image/jpg')
 cat6.save!
 
-booking1 = Booking.create(cat_id: cat4.id, user_id: user0.id, starting_date: Date.new(2020,4,18), ending_date: Date.new(2020,4,19), status: 'pending', total_price: 45)
-booking2 = Booking.create(cat_id: cat4.id, user_id: user0.id, starting_date: Date.new(2020,4,26), ending_date: Date.new(2020,4,29), status: 'pending', total_price: 135)
-booking3 = Booking.create(cat_id: cat5.id, user_id: user3.id, starting_date: Date.new(2020,4,25), ending_date: Date.new(2020,4,28), status: 'accepted', total_price: 105)
-booking4 = Booking.create(cat_id: cat5.id, user_id: user3.id, starting_date: Date.new(2020,5,5), ending_date: Date.new(2020,5,7), status: 'pending', total_price: 70)
+booking1 = Booking.create(cat_id: cat3.id, user_id: user0.id, starting_date: Date.new(2019,4,7), ending_date: Date.new(2019,4,9), status: 'accepted', total_price: 30)
+booking2 = Booking.create(cat_id: cat4.id, user_id: user1.id, starting_date: Date.new(2018,12,10), ending_date: Date.new(2018,12,14), status: 'accepted', total_price: 180)
+booking3 = Booking.create(cat_id: cat4.id, user_id: user1.id, starting_date: Date.new(2019,8,25), ending_date: Date.new(2019,8,27), status: 'accepted', total_price: 90)
+booking4 = Booking.create(cat_id: cat4.id, user_id: user1.id, starting_date: Date.new(2020,2,14), ending_date: Date.new(2020,2,17), status: 'accepted', total_price: 135)
+
+
 booking5 = Booking.create(cat_id: cat3.id, user_id: user3.id, starting_date: Date.new(2020,5,5), ending_date: Date.new(2020,5,7), status: 'rejected', total_price: 70)
 booking6 = Booking.create(cat_id: cat1.id, user_id: user1.id, starting_date: Date.new(2020,5,2), ending_date: Date.new(2020,4,4), status: 'pending', total_price: 40)
 booking7 = Booking.create(cat_id: cat2.id, user_id: user5.id, starting_date: Date.new(2020,4,26), ending_date: Date.new(2020,4,27), status: 'pending', total_price: 30)
