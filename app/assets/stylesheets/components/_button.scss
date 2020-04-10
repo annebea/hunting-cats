@@ -12,3 +12,19 @@
 
   }
 }
+
+.btn-home {
+  background-color: $orange;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  &:hover {
+    background-color: $orange;
+    opacity: 0.8;
+
+  }
+}
+
+.btn-login-signin {
+  margin: 24px 15px 0 15px;
+}
