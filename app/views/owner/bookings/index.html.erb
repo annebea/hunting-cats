@@ -9,7 +9,7 @@
           <div class="name">
             <h1><%= link_to booking.cat.name, cat_path(booking.cat) %> </h1>
           </div>
-          <p>Booked for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
+          <p>Booked by <%= booking.user.first_name %> for <%= (booking.ending_date - booking.starting_date).to_i %> days from <%= booking.starting_date.strftime("%B %d, %Y") %> </p>
           <% if booking.status == 'pending' %>
             <div class="accept">
               <%= link_to "Accept"%>
