@@ -11,7 +11,12 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 35px;
   padding: 0 35px 0 0;
+}
 
+.container-index-my-cats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
 }
 
 #map {
@@ -41,3 +46,4 @@
   grid-template-columns: 1fr;
   grid-gap: 50px;
 }
+
