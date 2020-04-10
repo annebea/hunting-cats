@@ -51,4 +51,9 @@
   &:hover {
     color: $blue;
   }
+  &:active {
+    color: $orange;
+    background-color: $light-gray;
+    outline: 0;
+  }
 }
