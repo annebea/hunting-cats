@@ -1,7 +1,15 @@
 class CatsController < ApplicationController
 
   def index
-    @cats = Cat.all
+    # @cats = Cat.all
+    @cats = Cat.geocoded # returns cats with coordinates
+
+    @markers = @cats.map do |cat|
+      {
+        lat: cat.latitude,
+        lng: cat.longitude
+      }
+    end
   end
 
   def show
