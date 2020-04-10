@@ -18,11 +18,11 @@ User.destroy_all
 # )
 # toto.save!
 
-user0 = User.new(email: 'huey@gmail.com', password: 'azerty', first_name: 'Huey', last_name: 'Duck', phone: '0230405060', address: 'Donaldville')
+user0 = User.new(email: 'huey@gmail.com', password: 'azerty', first_name: 'Huey', last_name: 'Duck', phone: '0230405060', address: '7 Rue Louis Blanc, Nantes')
 user0.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/huey.png')), filename: 'huey.png', content_type: 'image/png')
 user0.save!
 
-user1 = User.new(email: 'dewey@gmail.com', password: 'azerty', first_name: 'Dewey', last_name: 'Duck', phone: '0230405060', address: 'Donaldville')
+user1 = User.new(email: 'dewey@gmail.com', password: 'azerty', first_name: 'Dewey', last_name: 'Duck', phone: '0230405060', address: '131 Boulevard Robert Schuman, Nantes')
 user1.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/dewey.png')), filename: 'dewey.png', content_type: 'image/png')
 user1.save!
 
@@ -30,19 +30,19 @@ user2 = User.new(email: 'louie@gmail.com', password: 'azerty', first_name: 'Loui
 user2.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/louie.png')), filename: 'louie.png', content_type: 'image/png')
 user2.save!
 
-user3 = User.new(email: 'maud@gmail.com', password: 'azerty', first_name: 'Maud', last_name: 'De La Gournerie', phone: '0233454346', address: 'Rennes')
+user3 = User.new(email: 'maud@gmail.com', password: 'azerty', first_name: 'Maud', last_name: 'De La Gournerie', phone: '0233454346', address: '2 place des Lices, Rennes')
 user3.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/maud.jpeg')), filename: 'maud.jpeg', content_type: 'image/jpeg')
 user3.save!
 
-user4 = User.new(email: 'vincent@gmail.com', password: 'azerty', first_name: 'Vincent', last_name: 'Guilleux', phone: '0233454346', address: 'Rennes')
+user4 = User.new(email: 'vincent@gmail.com', password: 'azerty', first_name: 'Vincent', last_name: 'Guilleux', phone: '0233454346', address: '30 boulevard René Laennec, Rennes')
 user4.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/vincent.jpeg')), filename: 'vincent.jpeg', content_type: 'image/jpeg')
 user4.save!
 
-user5 = User.new(email: 'sebastien@gmail.com', password: 'azerty', first_name: 'Sebastien', last_name: 'Etienne', phone: '0233454346', address: 'Lannion')
+user5 = User.new(email: 'sebastien@gmail.com', password: 'azerty', first_name: 'Sebastien', last_name: 'Etienne', phone: '0233454346', address: '7 Avenue du General De Gaulle, Lannion')
 user5.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/seb.jpg')), filename: 'seb.jpg', content_type: 'image/jpg')
 user5.save!
 
-user6 = User.new(email: 'anne@gmail.com', password: 'azerty', first_name: 'Anne', last_name: 'Mabire', phone: '0233454346', address: 'Saint-Gilles')
+user6 = User.new(email: 'anne@gmail.com', password: 'azerty', first_name: 'Anne', last_name: 'Mabire', phone: '0233454346', address: '4 rue du Centre, Saint-Gilles')
 user6.avatar.attach(io: File.open(Rails.root.join('db/fixtures/users/anne.jpeg')), filename: 'anne.jpeg', content_type: 'image/jpeg')
 user6.save!
 

@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :owner_bookings, through: :cats, source: :bookings
   # va chercher dans le modele cats tous les bookings correspondants et créer la méthode correspondante owner_bookings
   has_one_attached :avatar
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
