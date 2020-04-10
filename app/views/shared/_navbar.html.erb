@@ -10,10 +10,10 @@
 
   <div class="collapse navbar-collapse navbar-lewagon" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item lien-navbar">
-        <%= link_to 'ALL CATS', cats_path, class: "lien-navbar"%>
-      </li>
       <% if user_signed_in? %>
+        <li class="nav-item lien-navbar">
+          <%= link_to 'ALL CATS', cats_path, class: "lien-navbar"%>
+        </li>
         <li class="nav-item lien-navbar">
           <%= link_to 'MY BOOKINGS',  bookings_path, class: "lien-navbar" %>
         </li>
@@ -44,11 +44,14 @@
           <% end %>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to 'Login', new_user_session_path, class: "btn btn-warning" unless user_signed_in? %>
+         <li class="nav-item lien-navbar lien-logout">
+          <%= link_to 'ALL CATS', cats_path, class: "lien-navbar"%>
         </li>
         <li class="nav-item">
-          <%= link_to 'Sign-up', new_user_registration_path, class: "btn btn-warning" unless user_signed_in? %>
+          <%= link_to 'Login', new_user_session_path, class: "btn btn-warning btn-home mb-4 btn-login-signin" unless user_signed_in? %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign-up', new_user_registration_path, class: "btn btn-warning btn-home mb-4 btn-login-signin" unless user_signed_in? %>
         </li>
       <% end %>
     </ul>
